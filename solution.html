@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is inside a div.
+  </div>
+  <script>
+    // Correct way to add new elements using DOM manipulation
+    const newParagraph = document.createElement("p");
+    newParagraph.textContent = "This is a paragraph.";
+    
+    const newDiv = document.createElement("div");
+    newDiv.textContent = "This is another div.";
+    
+    document.getElementById("myDiv").appendChild(newParagraph);
+    document.getElementById("myDiv").appendChild(newDiv);
+  </script>
+</body>
+</html>
